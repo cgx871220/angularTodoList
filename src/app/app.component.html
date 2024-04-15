@@ -1,0 +1,25 @@
+<h1 class="text-center bold mt-5 fw-bold">AngularTodo</h1>
+
+<div class="container mt-5">
+  <div class="row">
+    <div class="col">
+      <div>
+        <input class="w-100 border rounded-4 px-4" #inputTag type="text" [(ngModel)]="inputText" placeholder="請輸入內容"
+          (keyup.enter)="addData(inputTag.value)">
+        <ul class="list-unstyled mt-3 rounded-2 py-3">
+          <li *ngFor="let item of dataList" class="px-2 py-1">
+
+            <label [for]="item.context" class="w-100 h-100 px-2" [class.checked]="item.checked">
+              <input type="checkbox" class="form-check-input me-3" [id]="item.context" [(ngModel)]="item.checked">
+              {{item.context}}</label>
+          </li>
+        </ul>
+        <footer>
+          <button type="button" class="btn btn-sm bg-info me-1 rounded-4" (click)="checkAll()">check all</button>
+         
+          <button type="button" class="btn btn-sm bg-info me-1 rounded-4" (click)="deleteFn()">del checked</button>
+        </footer>
+      </div>
+    </div>
+  </div>
+</div>

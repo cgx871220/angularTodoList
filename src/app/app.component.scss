@@ -1,0 +1,34 @@
+@import 'bootstrap/scss/bootstrap';
+
+input{
+    height: 50px;
+    outline: none;
+}
+li:nth-child(odd){
+    background-color: #c7f6f2;
+}
+li:nth-child(even){
+    background-color: #87f4f0;
+}
+
+li:first-child{
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+li:last-child{
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+li{
+    font-size: 26px;
+}
+
+.checked{
+    color:lighten(gray,10%);
+    text-decoration:line-through;
+}
+
+
+input[type="checkbox"]{
+    background-color: #fff;
+}
